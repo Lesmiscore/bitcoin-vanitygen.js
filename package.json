@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/nao20010128nao/bitcoin-vanitygen.js/issues"
   },
-  "homepage": "https://github.com/nao20010128nao/bitcoin-vanitygen.js#readme"
+  "homepage": "https://github.com/nao20010128nao/bitcoin-vanitygen.js#readme",
+  "dependencies": {
+    "bitcoinjs-lib": "^3.3.2"
+  }
 }

@@ -1,4 +1,5 @@
-import { networks } from "bitcoinjs-lib";
+const bitcoinjs=require("bitcoinjs-lib");
+const networks=bitcoinjs.networks;
 
 module.exports = {
     bitcoin: networks.bitcoin,

@@ -1,4 +1,5 @@
-import { ECPair } from "bitcoinjs-lib";
+const bitcoinjs=require("bitcoinjs-lib");
+const ECPair=bitcoinjs.ECPair;
 
 function isFunction(functionToCheck) {
     var getType = {};
