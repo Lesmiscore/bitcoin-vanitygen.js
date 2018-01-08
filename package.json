@@ -1,0 +1,21 @@
+{
+  "name": "bitcoin-vanitygen",
+  "version": "1.0.0",
+  "description": "vanitygen",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nao20010128nao/bitcoin-vanitygen.js.git"
+  },
+  "keywords": [
+    "bitcoin"
+  ],
+  "author": "nao20010128nao",
+  "license": "apache3",
+  "bugs": {
+    "url": "https://github.com/nao20010128nao/bitcoin-vanitygen.js/issues"
+  },
+  "homepage": "https://github.com/nao20010128nao/bitcoin-vanitygen.js#readme"
+}
