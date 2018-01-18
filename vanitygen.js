@@ -1,5 +1,5 @@
-const bitcoinjs=require("bitcoinjs-lib");
-const ECPair=bitcoinjs.ECPair;
+const bitcoinjs = require("bitcoinjs-lib");
+const ECPair = bitcoinjs.ECPair;
 
 function isFunction(functionToCheck) {
     var getType = {};
@@ -34,7 +34,6 @@ var generator = /** @class */ (function () {
     function generator() {
         this.mLimit = -1;
         this.mFinders = [];
-        this.fFound = function (pub, priv) { };
     }
     generator.prototype.limit = function (l) {
         this.mLimit = l;
@@ -42,21 +41,20 @@ var generator = /** @class */ (function () {
     generator.prototype.addFinder = function (finder) {
         this.mFinders.push(finder);
     };
-    generator.prototype.found = function (f) {
-        this.fFound = f;
-    };
     generator.prototype.network = function (l) {
         this.mNetwork = l;
     };
-    generator.prototype.start = function () {
-        while (true) {
-            var key = ECPair.makeRandom({ network: this.mNetwork });
-            var privateKey = key.toWIF();
-            var address = key.getAddress();
-            if (anyMatch(key, this.mFinders)) {
-                this.fFound(address, privateKey);
+    generator.prototype.nextMatch = function () {
+        return new Promise((resolve, reject) => {
+            while (true) {
+                var key = ECPair.makeRandom({ network: this.mNetwork });
+                var privateKey = key.toWIF();
+                var address = key.getAddress();
+                if (anyMatch(key, this.mFinders)) {
+                    resolve({ address: address, privateKey: privateKey });
+                }
             }
-        }
+        });
     };
     return generator;
 }());
