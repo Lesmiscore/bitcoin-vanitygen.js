@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/nao20010128nao/bitcoin-vanitygen.js#readme",
   "dependencies": {
-    "bitcoinjs-lib": "^3.3.2"
+    "bitcoinjs-lib": "3.3.2"
   }
 }
